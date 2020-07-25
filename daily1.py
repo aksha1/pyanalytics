@@ -82,7 +82,7 @@ for i in range(1, 100, 2):    print(i, end=' ')
 #odd nos between x & y    
 #%% frozen ( round bracket, comma)
 #frozen set- accepts iterable object as input parameter.
-tupleFZ1 = (1, 2, 3, 4, 5, 6, 7, 8, 9) 
+tupleFZ1 = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) 
 type(tupleFZ1)  
 
 # converting tuple to frozenset 
@@ -99,7 +99,7 @@ frozenset2
 #%%
 #zip - map the similar index of multiple containers 
 # initializing lists 
-name = [ "Dhiraj", "Kounal", "Akhil", "Pooja" ] 
+name = [ "Akshaya", "Arjun", "Hari", "Amit" ] 
 rollno = [ 4, 1, 3, 2 ] 
 marks = [ 90, 50, 60, 70 ] 
 # using zip() to map values 
@@ -115,13 +115,28 @@ namez
 #numpy - array - same data type
 import numpy
 numpy.array([10,20])
+list5 = [1,2,3,4,5,6]
+print (list5)
+type(list5)
+np4 = numpy.array(list5)
+np4
+np4.sum()
+np4.mean()
 
 import numpy as np #np is alias
 np1 = np.arange(1,10)
-x=np.arange(start=1,stop=1000000,step=2)
+np1
+np0 = np.arange(50,100)
+np0
+x=np.arange(start=1,stop=1000000,step=5)
 len(x)
 x[1:100]
+x[1:50]
 x[1:50:10]
+x[0:50:10]
+x[1000:0:-5]
+
+x.mean()
 np
 np.mean(np.arange(1,10000000))
 np1
@@ -137,6 +152,7 @@ dir(np)
 np3 = np.array([[1,4],[3,1],[5,6],[10,50]])
 np3
 np3.shape
+x.shape
 #http://cs231n.github.io/python-numpy-tutorial/
 #%%
 #pandas - dataframe, excel like
@@ -151,6 +167,7 @@ type(df1)
 
 df1.columns  #columnanes
 df1.describe() #description of numerical values
+df1.describe()
 df1.dtypes #data types
 df1.shape  # rows and columns
 df1.groupby('gender').size()
@@ -183,6 +200,7 @@ import statsmodels.api as sm
 #https://vincentarelbundock.github.io/Rdatasets/datasets.html
 mtcars = sm.datasets.get_rdataset(dataname='mtcars', package= 'datasets')
 mtcars.data.head()
+mtcars.data.tail()
 
 #%%
 #Load from Excel/ CSV and export to
@@ -191,6 +209,8 @@ data.head(6)
 type(data)
 data.to_csv('mtcars.csv')
 data.to_excel('mtcarsExcel.xlsx','sheet3', header=False)
+data.to_excel('mtcarsExcel1.xlsx','sheet3', header=True)
+data.columns
 
 #writing to multiple sheets
 writer = pd.ExcelWriter('test.xlsx', engine='xlsxwriter')
