@@ -19,7 +19,8 @@ type(problem1)
 initialresult1 = problem1.sort_values(ascending= False)
 result1 = initialresult1.head(10)
 print ("The most loyal Customers : \n",result1)
-
+test = data.groupby(['custname','region']).agg({'revenue': sum,'margin':'mean'})
+test
 #%%
 #Top 10 Customers contributing to revenue
 problem2 = data.groupby ('custname')['revenue'].sum()

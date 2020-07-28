@@ -67,7 +67,11 @@ print("Last row :", lastrow)
 
 #rows between 25 and 3rd last
 
+
+
 #alternative rows and alternative column
+
+
 
 #find row with Mazda RX4 Wag and columns cyl, am
 
