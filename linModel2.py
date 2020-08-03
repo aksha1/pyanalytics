@@ -16,10 +16,12 @@ media = pd.DataFrame(pd.read_csv(url))
 media.head()
 
 #check duplicates
+
 sum(media.duplicated(subset = 'Date')) == 0
 #if duplicates value will not be =0
 
 #remove last column
+
 media = media.drop('Unnamed: 7', axis=1)
 media.head()
 
@@ -38,7 +40,7 @@ plt1 = sns.boxplot(media['Views_show'], ax = axs[0,0])
 plt1 = sns.boxplot(media['Visitors'], ax = axs[0,1])
 plt1 = sns.boxplot(media['Views_platform'], ax = axs[1,0])
 plt1 = sns.boxplot(media['Ad_impression'], ax = axs[1,1])
-plt.tight_layout()
+plt.tight_layout() 
 plt.show();
 
 #date format

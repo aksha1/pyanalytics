@@ -1,7 +1,7 @@
 #Topic: DT - Diabetis Data Set
 #-----------------------------
 
-pip install graphviz
+#pip install graphviz
 #install whichever library is not present
 #pip install pydotplus
 
@@ -67,6 +67,8 @@ print(classification_report(y_test, y_pred))
 y_test.shape, y_pred.shape
 y_test.head()
 y_pred[0:6]
+
+
 #%%%
 from graphviz import Source
 from sklearn import tree

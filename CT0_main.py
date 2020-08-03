@@ -36,7 +36,7 @@ data.index[data.isnull().any(axis=1)]
 data.iloc[6]  #see the null values
 data.isnull().sum().sum()  #75 missing values 
 data.isnull().sum(axis=0)  #columns missing
-data.isnull().sum(axis=1)
+data.isnull().sum(axis=1)  #rows missing
 data1 = data.dropna()
 
 data1.isnull().any()
